@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/lemons-app/static/js/main.effea548.chunk.js",
+    "main.js.map": "/lemons-app/static/js/main.effea548.chunk.js.map",
+    "runtime~main.js": "/lemons-app/static/js/runtime~main.9baa0466.js",
+    "runtime~main.js.map": "/lemons-app/static/js/runtime~main.9baa0466.js.map",
+    "static/js/2.263bdc22.chunk.js": "/lemons-app/static/js/2.263bdc22.chunk.js",
+    "static/js/2.263bdc22.chunk.js.map": "/lemons-app/static/js/2.263bdc22.chunk.js.map",
+    "index.html": "/lemons-app/index.html",
+    "precache-manifest.f802878e341f16061c906b86817c8fe6.js": "/lemons-app/precache-manifest.f802878e341f16061c906b86817c8fe6.js",
+    "service-worker.js": "/lemons-app/service-worker.js",
+    "static/media/lemonade.png": "/lemons-app/static/media/lemonade.5a710792.png",
+    "static/media/lemons.png": "/lemons-app/static/media/lemons.00f899af.png"
+  }
+}
