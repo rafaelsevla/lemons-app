@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Button = styled.button`
   color: #28a745;
@@ -25,17 +25,17 @@ export const Button = styled.button`
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
     outline: 0;
   }
-`;
+`
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const Title = styled.h3`
   font-style: italic;
-`;
+`
 
-export const InstructionsContainer = styled.div``;
-export const ImgContainer = styled.div``;
+export const InstructionsContainer = styled.div``
+export const ImgContainer = styled.div``
