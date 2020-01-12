@@ -2,11 +2,11 @@
 
 ## What's inside it?
 
-- [Babel](https://babeljs.io/) - A JavaScript compiler;
-- [Sass](https://sass-lang.com/) - CSS with superpowers;
+- [JavaScript Standard](https://standardjs.com/) - JavaScript style guide, linter, and formatter;
 - [React](https://reactjs.org) - A JavaScript library for building user interfaces;
 - [Redux](https://redux.js.org) - A predictable state container for JavaScript apps;
 - [Redux Persist](https://github.com/rt2zz/redux-persist) - Persist and rehydrate a redux store;
+- [Sass](https://sass-lang.com/) - CSS with superpowers;
 - [Styled Components](https://www.styled-components.com) - Visual primitives for the component age.
 
 ## Up and running
