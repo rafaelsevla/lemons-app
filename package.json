@@ -11,17 +11,16 @@
     "url": "https://github.com/rafaelsevla/lemons-app/issues"
   },
   "dependencies": {
-    "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-hot-loader": "4.8.2",
-    "react-redux": "^7.1.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
-    "redux": "^4.0.4",
-    "redux-persist": "^6.0.0",
-    "redux-thunk": "^2.3.0",
-    "styled-components": "^4.3.2"
+    "node-sass": "4.13.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-redux": "7.1.3",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.3.0",
+    "redux": "4.0.5",
+    "redux-persist": "6.0.0",
+    "redux-thunk": "2.3.0",
+    "styled-components": "4.4.1"
   },
   "scripts": {
     "start": "rescripts start",
@@ -58,17 +57,18 @@
     ]
   },
   "devDependencies": {
-    "@rescripts/cli": "0.0.10",
-    "@rescripts/rescript-env": "0.0.10",
-    "eslint-config-standard": "12.0.0",
-    "eslint-config-standard-react": "7.0.2",
-    "eslint-plugin-import": "2.17.3",
-    "eslint-plugin-node": "9.1.0",
-    "eslint-plugin-promise": "4.1.1",
-    "eslint-plugin-react": "7.13.0",
-    "eslint-plugin-standard": "4.0.0",
-    "gh-pages": "^2.1.1",
+    "@rescripts/cli": "0.0.13",
+    "@rescripts/rescript-env": "0.0.11",
+    "eslint-config-standard": "14.1.0",
+    "eslint-config-standard-react": "9.2.0",
+    "eslint-plugin-import": "2.20.0",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.17.0",
+    "eslint-plugin-standard": "4.0.1",
+    "react-hot-loader": "4.8.8",
+    "gh-pages": "2.2.0",
     "snazzy": "8.0.0",
-    "standard": "12.0.1"
+    "standard": "14.3.1"
   }
 }
