@@ -3,6 +3,7 @@
 ## What's inside it?
 
 - [JavaScript Standard](https://standardjs.com/) - JavaScript style guide, linter, and formatter;
+- [Material-UI](https://material-ui.com/) - React components for faster and easier web development;
 - [React](https://reactjs.org) - A JavaScript library for building user interfaces;
 - [Redux](https://redux.js.org) - A predictable state container for JavaScript apps;
 - [Redux Persist](https://github.com/rt2zz/redux-persist) - Persist and rehydrate a redux store;
