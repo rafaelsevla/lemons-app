@@ -1,52 +1,63 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import t from 'prop-types'
 import { LinearProgress } from '@material-ui/core'
 
 import { hot } from 'react-hot-loader'
 
-import { HOME, LOGIN } from './routes'
+import { HOME, LOGIN, REGISTER } from './routes'
 
 const MainPage = lazy(() => import('pages/main'))
 const Login = lazy(() => import('pages/login'))
+const Register = lazy(() => import('pages/register'))
 
-const App = ({ location }) => {
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false)
-  const [didCheckUserIn, setDidCheckUserIn] = useState(false)
+const App = () => {
+  const AuthenticatedRoute = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={props => {
+        return localStorage.getItem('token') !== null ? (
+          <Component {...props} />
+        ) : (
+          <Redirect
+            to={{ pathname: LOGIN }}
+          />
+        )
+      }}
+    />
+  )
 
-  useEffect(() => {
-    const token = localStorage.getItem('token')
-    if (token) {
-      setIsUserLoggedIn(true)
-    }
-    setDidCheckUserIn(true)
-  }, [])
+  const NotAuthenticatedRoute = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={props => {
+        return localStorage.getItem('token') === null ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to={{ pathname: HOME }} />
+        )
+      }}
+    />
+  )
 
-  if (!didCheckUserIn) {
-    return <LinearProgress />
+  NotAuthenticatedRoute.propTypes = {
+    component: t.node
   }
 
-  if (isUserLoggedIn && location.pathname === LOGIN) {
-    return <Redirect to={HOME} />
-  }
-
-  if (!isUserLoggedIn && location.pathname !== LOGIN) {
-    return <Redirect to={LOGIN} />
+  AuthenticatedRoute.propTypes = {
+    component: t.node
   }
 
   return (
     <Suspense fallback={<LinearProgress />}>
       <Switch>
-        <Route exact path={HOME} component={MainPage} />
-        <Route path={LOGIN} component={Login} />
+        <AuthenticatedRoute exact path={HOME} component={MainPage} />
+        <NotAuthenticatedRoute path={LOGIN} component={Login} />
+        <NotAuthenticatedRoute path={REGISTER} component={Register} />
         <Route path='/lemons-app' component={MainPage} />
       </Switch>
     </Suspense>
   )
-}
-
-App.propTypes = {
-  location: t.object.isRequired
 }
 
 export default hot(module)(App)
